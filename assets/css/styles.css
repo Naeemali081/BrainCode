@@ -331,6 +331,9 @@ body.light-theme {
 .home__img {
   width: 160px;
 }
+.home__img.animation {
+  width: 290px !important;
+}
 
 .home__handle {
   justify-self: center;

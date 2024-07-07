@@ -14,6 +14,7 @@
 
     <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
 
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -21,14 +22,14 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title> Naeem's Portfolio </title>
+    <title> BrainCode 360 </title>
 </head>
 
 <body>
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Naeem</a>
+            <a href="#" class="nav__logo">BrainCode 360</a>
 
             <div class="nav__menu">
                 <ul class="nav__list">
@@ -76,21 +77,22 @@
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
-                    <span class="home__greeting">Hello, I'm</span>
-                    <h1 class="home__name">Naeem Abbas Ali</h1>
-                    <h3 class="home__education">Full Developer</h3>
+                    <!-- <span class="home__greeting">Hello, I'm</span> -->
+                    <h1 class="home__name">BrainCode 360</h1>
+                    <h3 class="home__education">Software engineers</h3>
 
                     <div class="home__button">
-                        <a download="" href="assets/pdf/NaeemCv.pdf" class="button button--ghost">
-                            Download CV
+                        <a   href="#testimonial" class="button button--ghost">
+                            Client Feedbacks
                         </a>
 
-                        <a href="#about" class="button">About</a>
+                        <a href="#about" class="button">About Us</a>
                     </div>
                 </div>
 
                 <div class="home__handle">
-                    <img src="assets/img/aout.png" alt="" class="home__img">
+                    <div id="animationContainer" class="home__img animation"></div>
+                    <!-- <img src="assets/img/aout.png" alt="" class="home__img"> -->
                 </div>
 
                 <div class="home__social">
@@ -114,8 +116,8 @@
 
         <!--=============== ABOUT ===============-->
         <section class="about section" id="about">
-            <span class="section__subtitle">My Intro</span>
-            <h2 class="section__title">About Me</h2>
+            <!-- <span class="section__subtitle">Our Intro</span> -->
+            <h2 class="section__title">About Us</h2>
 
             <div class="about__container container grid">
                 <img src="assets/img/about.jpg" alt="" class="about__img">
@@ -125,7 +127,7 @@
                         <div class="about__box">
                             <i class='bx bx-award about__icon'></i>
                             <h3 class="about__title">Experience</h3>
-                            <span class="about__subtitle">3 Years Working</span>
+                            <span class="about__subtitle">5 Years Working</span>
                         </div>
                         <div class="about__box">
                             <i class='bx bx-briefcase-alt about__icon'></i>
@@ -137,22 +139,28 @@
                             <h3 class="about__title">Support</h3>
                             <span class="about__subtitle">Online 24/7</span>
                         </div>
+                        <div class="about__box">
+                            <i class='bx bx-group about__icon'></i>
+                            <h3 class="about__title">Team members</h3>
+                            <span class="about__subtitle">10-20</span>
+                        </div>
                     </div>
 
                     <p class="about__description">
-                        Frontend Developer. I create web pages with UI / UX user interfaces,
-                        I have years of experience and many clients are happy with the work I did.
+                        Web Development Specialist. We create web pages and applications using Vue.js, React, Angular, and WordPress.
+                        With years of experience, I have successfully delivered projects to many satisfied clients.
                     </p>
+                    
 
-                    <a href="#contact" class="button about__button-contact">Contact Me</a>
+                    <a href="#contact" class="button about__button-contact">Contact Us</a>
                 </div>
             </div>
         </section>
 
         <!--=============== SKILLS ===============-->
         <section class="skills section" id="skills">
-            <span class="section__subtitle">My Abilities</span>
-            <h2 class="section__title">My Experience</h2>
+            <span class="section__subtitle">Our Abilities</span>
+            <h2 class="section__title">Our Experience</h2>
 
             <div class="skills__container container grid">
                 <div class="skills__content">
@@ -186,17 +194,17 @@
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
-
-                        </div>
-                        <div class="skills__group">
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Bootstrap</h3>
-                                    <span class="skills__level">Intermediate</span>
+                                    <h3 class="skills__name">Bootstrap & Tailwind</h3>
+                                    <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="skills__group">
+                            
 
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
@@ -215,6 +223,22 @@
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Angular</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">React Native</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -225,7 +249,7 @@
 
                     <div class="skills__box">
                         <div class="skills__group">
-                            <!-- <div class="skills__data">
+                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
@@ -234,7 +258,7 @@
                                 </div>
                             </div>
 
-                            <div class="skills__data">
+                           <!-- <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
@@ -258,12 +282,12 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">PHP</h3>
-                                    <span class="skills__level">Intermediate</span>
+                                    <h3 class="skills__name">PHP Laravel</h3>
+                                    <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
 
-                            <!-- <div class="skills__data">
+                            <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
@@ -272,7 +296,7 @@
                                 </div>
                             </div>
 
-                            <div class="skills__data">
+                            <!-- <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
@@ -288,8 +312,8 @@
 
         <!--=============== SERVICES ===============-->
         <section class="services section">
-            <span class="section__subtitle">My Services</span>
-            <h2 class="section__title">What I Offer</h2>
+            <span class="section__subtitle">Our Services</span>
+            <h2 class="section__title">What we Offer</h2>
 
             <div class="services__container container grid">
                 <div class="services__card">
@@ -306,49 +330,64 @@
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">Product Designing</h3>
+                            <h3 class="services__modal-title">Bug Fixing</h3>
 
                             <p class="services__modal-description">
-                                I design and develop the consumer products with creative ability and
-                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                                We design and develop consumer products with a creative and hands-on approach,
+                                satisfying customers' and markets' needs and trends.
                             </p>
-
+                            
                             <ul class="services__modal-list">
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I develop the user interfaces.
+                                        We develop user interfaces.
                                     </p>
                                 </li>
-
+                            
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Web Page design and development.
+                                        Web page design and development.
                                     </p>
                                 </li>
-
+                            
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I create the UX element interactions.
+                                        We create UX element interactions.
                                     </p>
                                 </li>
-
+                            
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I position your company brand.
+                                        We position your company brand.
                                     </p>
                                 </li>
-
+                            
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
                                         Create modern 3-D experiences.
                                     </p>
                                 </li>
+                            
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        We provide comprehensive bug fixing services.
+                                    </p>
+                                </li>
+                            
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        We offer thorough debugging to ensure optimal performance.
+                                    </p>
+                                </li>
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -367,7 +406,7 @@
                             <h3 class="services__modal-title">UI/UX Designing</h3>
 
                             <p class="services__modal-description">
-                                I design and develop the consumer products with creative ability and
+                                We design and develop the consumer products with creative ability and
                                 hands-on approach which stisfies the customers' and markets' needs and trends.
                             </p>
 
@@ -375,7 +414,7 @@
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I develop the user interfaces.
+                                        We develop the user interfaces.
                                     </p>
                                 </li>
 
@@ -389,14 +428,14 @@
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I create the UX element interactions.
+                                        We create the UX element interactions.
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I position your company brand.
+                                        We position your company brand.
                                     </p>
                                 </li>
 
@@ -412,7 +451,7 @@
                 </div>
 
                 <div class="services__card">
-                    <h3 class="services__title">Backend <br> Changing</h3>
+                    <h3 class="services__title">Backend <br> Development</h3>
 
                     <span class="services__button">
                         See More <i class='bx bx-right-arrow services__icon'></i>
@@ -422,48 +461,36 @@
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">Visual Designing</h3>
+                            <h3 class="services__modal-title">Backend Development</h3>
 
                             <p class="services__modal-description">
-                                I design and develop the consumer products with creative ability and
-                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                                We design and develop consumer products with a creative and hands-on approach,
+                                satisfying customers' and markets' needs and trends. Our expertise includes both frontend and backend development to deliver comprehensive solutions.
                             </p>
+                            
 
                             <ul class="services__modal-list">
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I develop the user interfaces.
+                                        We develop backend structure.
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Web Page design and development.
+                                        We create optimized API's.
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I create the UX element interactions.
+                                        Third party integrations.
                                     </p>
                                 </li>
 
-                                <li class="services__modal-item">
-                                    <i class='bx bx-check-circle'></i>
-                                    <p class="services__modal-info">
-                                        I position your company brand.
-                                    </p>
-                                </li>
-
-                                <li class="services__modal-item">
-                                    <i class='bx bx-check-circle'></i>
-                                    <p class="services__modal-info">
-                                        Create modern 3-D experiences.
-                                    </p>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -479,7 +506,7 @@
             <div class="work__filters">
                 <span class="work__item active-work" data-filter='all'>All</span>
                 <span class=" work__item" data-filter='.web'>Web</span>
-                <span class=" work__item" data-filter='.movil'>Movil</span>
+                <span class=" work__item" data-filter='.movil'>Mobile</span>
                 <span class=" work__item" data-filter='.design'>Design</span>
             </div>
 
@@ -497,7 +524,7 @@
                 <div class="work__card mix movil">
                     <img src="assets/img/work2.jpg" alt="" class="work__img">
 
-                    <h3 class="work__title">App Movil</h3>
+                    <h3 class="work__title">Mobile App</h3>
 
                     <a href="#" class="work__button">
                         Demo <i class='bx bx-right-arrow work__icon'></i>
@@ -514,31 +541,12 @@
                     </a>
                 </div>
 
-                <div class="work__card mix web">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="assets/img/work5.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
 
             </div>
         </section>
 
         <!--=============== TESTIMONIALS ===============-->
-        <section class="testimonial section">
+        <section class="testimonial section" id="testimonial">
             <span class="section__subtitle">My clients say</span>
             <h2 class="section__title">Testimonials</h2>
 
@@ -547,27 +555,16 @@
                     <div class="testimonial__card swiper-slide">
                         <img src="assets/img/testimonial1.png" alt="" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Jhon Doe</h3>
+                        <h3 class="testimonial__name">Ahmad</h3>
                         <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                            Very fast & cooperative team. I was very impressed and work with them next time as well.
                         </p>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
                         <img src="assets/img/testimonial2.png" alt="" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Ada Hill</h3>
-                        <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
-                        </p>
-                    </div>
-
-                    <div class="testimonial__card swiper-slide">
-                        <img src="assets/img/testimonial3.png" alt="" class="testimonial__img">
-
-                        <h3 class="testimonial__name">Jessica Park</h3>
+                        <h3 class="testimonial__name">Malika Peter</h3>
                         <p class="testimonial__description">
                             A really good job, all aspects of the project were done well.
                             Very creative and thoughtful. I was very impressed and would recommend this to anyone.
@@ -708,6 +705,15 @@
 
     <!--=============== SCROLLREVEAL ===============-->
 
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('animationContainer'), // the DOM element that will contain the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'assets/animation.json' // the path to the animation JSON
+        });
+    </script>
     <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 

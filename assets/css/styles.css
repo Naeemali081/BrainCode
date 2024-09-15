@@ -4,7 +4,6 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   /*   
@@ -47,6 +46,12 @@
   --z-modal: 1000;
 }
 
+.showDesktop{
+  display: flex;
+}
+.showMobile{
+  display: none;
+}
 /* Responsive typography */
 @media screen and (min-width: 968px) {
   :root {
@@ -915,6 +920,17 @@ body.light-theme {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 550px) {
+  .showDesktop{
+    display: none !important;
+  }
+  .showMobile{
+    display: flex !important;
+    visibility: 1 !important;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 320px) {
   .nav__menu {
     padding: 1rem 1.5rem;

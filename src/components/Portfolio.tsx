@@ -6,16 +6,16 @@ import { useRef } from 'react';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'DigiSign Pro',
     category: 'Web Development',
     description: 'A modern online shopping experience with real-time inventory and seamless checkout.',
-    image: '/assets/images/default.svg',
+    image: './public/DigiSign.png',
   },
   {
-    title: 'Healthcare App',
+    title: 'Health Bridge Accounts',
     category: 'Mobile Development',
     description: 'Patient management system with telemedicine capabilities and health tracking.',
-    image: '/assets/images/default.svg',
+    image: './public/hba.png',
   },
   {
     title: 'Financial Dashboard',

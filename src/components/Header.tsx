@@ -13,7 +13,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-11 h-11 bg-gradient-to-br rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/30">
-              <img src="./public/smallLogo.png" alt="" />
+              <img src="https://braincode360.netlify.app/smallLogo.png" alt="" />
             </div>
             <span className="text-2xl font-bold text-white tracking-tight">BrainCode 360</span>
           </div>

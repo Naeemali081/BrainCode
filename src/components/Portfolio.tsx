@@ -9,13 +9,13 @@ const projects = [
     title: 'DigiSign Pro',
     category: 'Web Development',
     description: 'A modern online shopping experience with real-time inventory and seamless checkout.',
-    image: './public/DigiSign.png',
+    image: 'https://braincode360.netlify.app/DigiSign.png',
   },
   {
     title: 'Health Bridge Accounts',
     category: 'Mobile Development',
     description: 'Patient management system with telemedicine capabilities and health tracking.',
-    image: './public/hba.png',
+    image: 'https://braincode360.netlify.app/hba.png',
   },
   {
     title: 'Financial Dashboard',

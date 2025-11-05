@@ -58,7 +58,7 @@ export function Services() {
 
   return (
     <section id="services" className="py-24 px-4 relative" ref={ref}>
-      <div className="container mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

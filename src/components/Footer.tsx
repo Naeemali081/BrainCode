@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: '#', label: 'Email' },
+    { icon: Github, href: 'https://github.com/BrainCode360', label: 'GitHub' },
+    { icon: Instagram, href: 'https://www.instagram.com/braincode360/', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/braincode-360', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:contact@braincode360.com', label: 'Email' },
   ];
 
   return (
     <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4">
-      <div className="container mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -67,6 +67,8 @@ export function Footer() {
                 <motion.a
                   key={index}
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={link.label}
                   whileHover={{ scale: 1.2, y: -3 }}
                   whileTap={{ scale: 0.9 }}

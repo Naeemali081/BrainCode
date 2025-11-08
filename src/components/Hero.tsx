@@ -2,8 +2,12 @@ import { Button } from './ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { ParticleNetwork } from '@/components/ParticleNetwork';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { ContactModal } from './ContactModal';
 
 export function Hero() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
     <section id="home" className="min-h-screen pt-32 pb-24 px-4 relative overflow-hidden flex items-center bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950">
       <ParticleNetwork />
@@ -83,6 +87,7 @@ export function Hero() {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-base px-10 py-7 shadow-2xl shadow-purple-500/50 transition-all duration-300 rounded-full font-semibold"
+              onClick={() => setIsContactModalOpen(true)}
             >
               Start a Project
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -102,6 +107,11 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
+      
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </section>
   );
 }

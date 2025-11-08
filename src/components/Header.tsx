@@ -1,13 +1,21 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { ContactModal } from './ContactModal';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const menuItems = ['Home', 'Services', 'Technologies', 'Portfolio', 'About', 'Contact'];
 
   const handleNavClick = (item: string) => {
+    if (item === 'Contact') {
+      setIsContactModalOpen(true);
+      setIsMenuOpen(false);
+      return;
+    }
+    
     const targetId = item.toLowerCase().replace(/\s+/g, '-');
     const element = document.getElementById(targetId);
     
@@ -49,6 +57,7 @@ export function Header() {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg shadow-purple-500/30 transition-all duration-300 hover:scale-105 rounded-full px-8"
+              onClick={() => setIsContactModalOpen(true)}
             >
               Start a Project
             </Button>
@@ -78,12 +87,18 @@ export function Header() {
             <Button 
               size="lg" 
               className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full"
+              onClick={() => setIsContactModalOpen(true)}
             >
               Start a Project
             </Button>
           </nav>
         )}
       </div>
+      
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </header>
   );
 }

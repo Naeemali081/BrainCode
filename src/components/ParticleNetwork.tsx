@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { usePerformance } from '../hooks/usePerformance';
 
 interface Particle {
   x: number;
@@ -11,8 +12,12 @@ interface Particle {
 
 export function ParticleNetwork() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { isLowEndDevice, isMobile, reducedMotion } = usePerformance();
 
   useEffect(() => {
+    // Don't render particles on low-end devices or when reduced motion is preferred
+    if (isLowEndDevice || reducedMotion) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -28,8 +33,9 @@ export function ParticleNetwork() {
     window.addEventListener('resize', resizeCanvas);
 
     const particles: Particle[] = [];
-    const particleCount = 100;
-    const maxDistance = 150;
+    // Reduce particle count on mobile devices
+    const particleCount = isMobile ? 30 : 100;
+    const maxDistance = isMobile ? 100 : 150;
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
@@ -107,7 +113,7 @@ export function ParticleNetwork() {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
+  }, [isLowEndDevice, isMobile, reducedMotion]);
 
   return (
     <canvas
